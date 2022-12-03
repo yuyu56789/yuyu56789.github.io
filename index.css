@@ -1,0 +1,219 @@
+body {
+  scroll-behavior: smooth;
+}
+
+liu{
+  
+  background-color: #6C7753;
+  background-color: #B3BB7C;
+  background-color: #F2F2F4;
+  background-color: #D9C0CB;
+  background-color: #C75070;
+}
+
+
+
+h1 {
+  text-align: center;
+  color: #000;
+}
+
+h2 {
+  background-image: linear-gradient(to bottom, #F2F2F4 calc(100% - 3rem), rgba(255, 255, 255, .01));
+}
+
+.card-txt {
+  width:100%;
+  text-align: justify;
+  float:left;
+  margin-left:0px;
+  margin-right:0px;
+  /* background-image: linear-gradient(to top, rgba(43, 152, 109, 0.5) calc(100% - 30rem), rgba(255, 255, 255, .01)); */
+  background-image: linear-gradient(to top, #F2F2F4 calc(100% - 30rem), rgba(255, 255, 255, .01));
+}
+
+
+
+.card-main .btn {
+  padding: .95rem .95rem;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: x-large;
+  text-decoration-line:none;
+  /* color: rgba(71, 143, 51, 0.65); */
+  /* color: #6C7753; */
+  /* color: #dde9c0; */
+  color: #ffffff;
+  border: 0;
+  background-color: #B3BB7C;
+  width: 90%;
+}
+.card-main .btn:hover {
+  background-color: #61b3557b;
+  /* background-color: #070768; */
+}
+
+#btnSubmit{
+  font-size: x-large;
+  text-align: center;
+  width: 99%;
+}
+
+
+
+
+.card-right a {
+  padding: .1875rem .95rem;
+  margin-top: .125rem;
+  margin-left: 40px;
+  /* margin-left: .9125rem; */
+  color: rgba(0, 0, 0, .65);
+  text-decoration: none;
+  /* background-color: rgb(107, 185, 107); */
+  font-size: x-large;
+}
+
+.card-right a:hover,
+.card-right a:focus {
+  color: rgba(0, 0, 0, .85);
+  background-color: rgba(93, 46, 164, 0.1);
+}
+
+.card-right .active {
+  font-weight: 600;
+  color: rgba(0, 0, 0, .85);
+}
+
+
+.card-right .btn {
+  padding: .95rem .95rem;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: x-large;
+  color: rgba(0, 0, 0, 0.65);
+  border: 0;
+  background-color: rgba(255, 190, 190, 0.5);
+  width: 90%;
+}
+
+
+.card-right .btn::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform .35s ease;
+  transform-origin: .5em 50%;
+}
+
+
+
+/* Layout */
+@media (min-width: 1200px) {
+  body {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .resume-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    grid-column: 1 / span 3;
+  }
+
+  .resume-header a{
+    color: #F2F2F4;
+    text-decoration: none;
+    float: right;
+  }
+
+
+  .resume-header a:hover{
+    text-decoration: underline;
+  }
+
+
+
+  
+  .card-right,
+  .card-main {
+    padding-top: 4rem;
+  }
+
+
+  .card-main,
+  .card-main section,
+  .card-main article {
+    display: inherit; 
+    gap: inherit; 
+    grid-template-columns: 1fr 4fr;
+    grid-column: 1 / span 2;
+    grid-template-rows: auto;
+  }
+
+  .card-right {
+    grid-area: 1 / 3;
+    scroll-margin-top: 4rem;
+  }
+
+  .card-main section,
+  .card-main section > h2 {
+    top: 2rem;
+    scroll-margin-top: 2rem;
+  }
+ 
+  .card-main section > h2 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* color: rgb(23, 197, 20); */
+    color: #6C7753;
+  }
+
+
+
+  .card-main section > h2::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -2rem;
+    left: 0;
+    z-index: -1;
+    content: "";
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) calc(100% - 3rem), rgba(255, 255, 255, .01));
+  }
+
+  .card-main article,
+  .card-main .content-indexing {
+    top: 10rem;
+    scroll-margin-top: 10rem;
+    /* color: rgb(137, 16, 76); */
+  }
+  
+  .content-indexing {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* color: rgb(137, 16, 76); */
+    color: #6C7753;
+  }
+
+  .card-main .content-indexing {
+    z-index: 1;
+  }
+
+
+    /* images slider */      
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .carousel-item {
+    text-align: center;
+  }
+  
+
+}
